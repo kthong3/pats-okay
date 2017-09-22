@@ -1,0 +1,19 @@
+<h1>Please register please below please</h1>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/users" method="post">
+  <label for="username">Username:</label>
+  <input class="block" id="username" type="text" name="user[username]">
+  <label for="email">E-mail:</label>
+  <input class="block" id="email" type="email" name="user[email]">
+  <label for="password">Password:</label>
+  <input class="block" id="password" type="password" name="user[password]">
+  <input class="block" type="submit" value="Register!">
+</form>
