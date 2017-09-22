@@ -1,5 +1,7 @@
 <h1>Please login please please</h1>
 
+<%= erb :_errors, locals: { errors: @errors } %>
+
 <form action="/login" method="post">
   <label for="username">Username:</label>
   <input class="block" id="username" type="text" name="username">
