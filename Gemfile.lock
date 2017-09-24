@@ -31,7 +31,7 @@ GEM
       awesome_print (~> 1.8, >= 1.8.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
-    faker (1.7.3)
+    faker (1.8.4)
       i18n (~> 0.5)
     i18n (0.8.6)
     mini_mime (0.1.4)
@@ -93,7 +93,7 @@ DEPENDENCIES
   capybara
   extra_print
   factory_girl
-  faker (~> 1.7.3)
+  faker
   pg (~> 0.18)
   rack-test
   rake (~> 12.0.0)

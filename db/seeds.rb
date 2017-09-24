@@ -1,3 +1,5 @@
+require 'faker'
+
 temp_decks = [
   {title: "Pat"},
   {title: "Outside"}
@@ -31,3 +33,10 @@ temp_cards = [
 
 Card.create!(temp_cards)
 Deck.create!(temp_decks)
+
+
+10.times do
+  user = User.new(username: Faker::HeyArnold.character, password: 'password')
+  user.email = Faker::Internet.safe_email(user.username)
+  user.save
+end
