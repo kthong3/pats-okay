@@ -2,13 +2,15 @@ class Guess < ApplicationRecord
   belongs_to :card
   belongs_to :round
 
-  before_validation :make_counter
+  # use guess.increment(:counter) in guess controller
 
-  def make_counter
-    self.counter = 1
+  def check_answer(user_answer)
+    self.card.answer == user_answer
   end
 
-  validates :counter, :completed, :round_id, :card_id, { :presence => true }
+  validates :counter, :round_id, :card_id, { :presence => true }
+
+  validates_inclusion_of :completed, in: [true, false]
 end
 
 

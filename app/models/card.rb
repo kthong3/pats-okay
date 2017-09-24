@@ -8,9 +8,16 @@ class Card < ApplicationRecord
   #   @card = Deck.
   # end
 
-  def self.pick_random_card(deck_id)
-    @all_cards = Card.where(deck_id: deck_id)
-    @card = @all_cards.sample
-  end
+  # def check_answer(user_answer)
+  #   if self.answer == user_answer
+  #     @correct = true
+  #   else
+  #     @correct = false
+  #   end
+  #   @correct
+  # end
 
+  # def correct?
+  #   @correct
+  # end
 end
