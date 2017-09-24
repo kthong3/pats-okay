@@ -1,3 +1,4 @@
 get '/rounds/:id' do
-  erb :index
+  @round = Round.find(params[:id])
+  erb :'rounds/show'
 end

@@ -16,14 +16,15 @@ class Round < ApplicationRecord
   def pick_random_card
     @guesses = self.guesses.where(completed: false)
     @guess = @guesses.sample
-    @card = @guess.card
+    @guess.card
   end
 
-  # def pick_random_card
-  #   @all_cards = self.cards.where(deck_id: self.deck_id)
-  #   array = @all_cards.to_a
-  #   array.reject { |card| card.correct? }
-  #   # @all_cards.map { |card| !card.correct? }
-  #   @card = array.sample
-  # end
+  def total_guesses
+    self.guesses.reduce(0) { |sum, guess| sum + guess.counter }
+  end
+
+  def total_first_correct
+    self.guesses.where(counter: 1).count
+  end
+
 end
