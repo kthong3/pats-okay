@@ -24,6 +24,6 @@ card.guesses
 find_or_update/find_or_create this specific guess if the user guessed this card before we add to counter
 
 all the card.guesses with the counter of 1 is the first try correct
-or round.guesses with a counter of 1 is the first trye correct
+or round.guesses with a counter of 1 is the first trye correct"
 
 =end
