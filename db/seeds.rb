@@ -18,6 +18,10 @@ temp_cards = [
    answer: "True",
    deck_id: 1 },
 
+  {question: "Is Pat okay? OPTIONS: Totally, Yes, No, or I guess.",
+   answer: "I guess",
+   deck_id: 1 },
+
   {question: "Is the sky blue? True or False",
     answer: "True",
     deck_id: 2},

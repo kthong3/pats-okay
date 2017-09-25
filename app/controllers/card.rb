@@ -16,8 +16,8 @@ post '/rounds/:round_id/cards/:id' do
     @guess.save
   end
 
-  shit = @round.guesses.where(completed: true).count
-  if @round.guesses.count == shit
+  guess_count = @round.guesses.where(completed: true).count
+  if @round.guesses.count == guess_count
     redirect "/rounds/#{@round.id}"
   end
 
