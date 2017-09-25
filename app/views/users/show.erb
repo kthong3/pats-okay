@@ -1,1 +1,12 @@
-<h3><%= @user.username %></h3>
+<h3>HEY I AM <%= @user.username.upcase %></h3>
+
+<% @user.rounds.each do |round| %>
+<div class="container">
+<h4><%= round.deck.title %></h4>
+<ul>
+  <li>Cards in Deck: <%= round.cards.count %> </li>
+  <li>First Guess Correct: <%= round.total_first_correct %></li>
+  <li>Total Guesses: <%= round.total_guesses %></li>
+</ul>
+</div>
+<% end %>

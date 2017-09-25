@@ -1,13 +1,15 @@
 <h1>Please login please please</h1>
+<div class="container">
+  <%= erb :_errors, locals: { errors: @errors } %>
+</div>
+<div class="container">
+  <form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input class="block" id="username" type="text" name="username">
 
-<%= erb :_errors, locals: { errors: @errors } %>
+    <label for="password">Password:</label>
+    <input class="block" id="password" type="password" name="password">
 
-<form action="/login" method="post">
-  <label for="username">Username:</label>
-  <input class="block" id="username" type="text" name="username">
-
-  <label for="password">Password:</label>
-  <input class="block" id="password" type="password" name="password">
-
-  <input type="submit" value="Login">
-</form>
+    <input type="submit" value="Login">
+  </form>
+</div>

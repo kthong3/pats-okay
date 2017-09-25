@@ -21,6 +21,14 @@ class User < ApplicationRecord
     end
   end
 
+  def rounds_played
+    self.rounds.count
+  end
+
+  def decks_played
+
+  end
+
   validates :username, :email, :encrypted_password, { :presence => true }
   validates :username, :email, { uniqueness: true }
 end

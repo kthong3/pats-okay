@@ -1,6 +1,8 @@
 <h1>HEY I AM CARD</h1>
+<div class="container">
  <p><%= @card.question %></p>
  <form action="/rounds/<%= @round.id %>/cards/<%= @card.id %>" method="post">
-  <input type="text" name="user_answer">
-  <input type="submit" value="Submit Guess">
-</form>
+    <input type="text" name="user_answer">
+    <input type="submit" value="Submit Guess">
+  </form>
+</div>

@@ -39,8 +39,14 @@ Card.create!(temp_cards)
 Deck.create!(temp_decks)
 
 
-10.times do
-  user = User.new(username: Faker::HeyArnold.character, password: 'password')
-  user.email = Faker::Internet.safe_email(user.username)
-  user.save
-end
+# 10.times do
+#   user = User.new(username: Faker::HeyArnold.character, password: 'password')
+#   user.email = Faker::Internet.safe_email(user.username)
+#   user.save
+# end
+
+# user = [1,2,3,4,5,6,7,8]
+# deck = [1,2]
+# 10.times do
+#   Round.create(user_id: user.sample, deck_id: deck.sample)
+# end
