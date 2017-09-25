@@ -9,6 +9,7 @@ post '/rounds/:round_id/cards/:id' do
   @card = @round.deck.cards.find(params[:id])
   @guess = @card.guesses.find_by(round_id: @round.id)
   @guess.increment(:counter)
+  @guess.save
 
   if @guess.check_answer(params[:user_answer])
     @guess.update(completed: true)

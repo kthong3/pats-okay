@@ -1,0 +1,5 @@
+<ul>
+  <li><a href="/users/<%= current_user.id %>">hello, <%= current_user.username.downcase %>!</a></li>
+  <li><a href="/">home</a></li>
+  <li><%= erb :'sessions/_logout' %></li>
+</ul>

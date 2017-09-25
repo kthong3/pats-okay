@@ -15,8 +15,15 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Decks Decks Decks</title>
 </head>
+<nav>
+  <% if current_user %>
+    <%= erb :'users/_logged_in_links' %>
+  <% else %>
+    <%= erb :'users/_logged_out_links' %>
+  <% end %>
+</nav>
 <body>
 <h1>FLASHCARDS</h1>
   <%= yield %>

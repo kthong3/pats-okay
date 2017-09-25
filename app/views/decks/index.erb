@@ -2,7 +2,8 @@
   <h2>Flashcards Decks</h2>
   <ul>
     <% @decks.each do |deck| %>
-    <li><%= deck.title %></li>
+    <li><%= erb :'rounds/_new_round', locals: { deck: deck } %>
+    </li>
     <% end %>
   </ul>
 </div>
